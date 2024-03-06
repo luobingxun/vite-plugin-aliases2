@@ -1,0 +1,52 @@
+{
+  "name": "vite-plugin-aliases2",
+  "version": "0.0.8",
+  "description": "A vite plugin that automatically generates file aliases",
+  "keywords": [
+    "vite",
+    "alias",
+    "aliases",
+    "plugin",
+    "vite-plugin"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antfu/vite-plugin-aliases2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antfu/vite-plugin-aliases2/issues"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build": "rimraf ./dist && rollup --config ./rollup.config.js --bundleConfigAsCjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.12.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.5"
+  }
+}
